@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            border: 3px solid rgb(233, 61, 61);
+            padding: 5px;
+        }
+        img{
+            width:250px;
+            float: left;
+            margin-right:15px;
+        }
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        /* bu clearfixi kapsayıcı elemana veriyoruz */
+    </style>
+</head>
+<body>
+    <!-- Floating özelliği inline elamanlarda nasıl kullanıyoruz?Resimlerde nasıl kullanıyoruz? -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi iste minima minus labore in, illum maxime dicta vel quia velit. Sequi reiciendis, nemo voluptatibus molestiae minima natus temporibus excepturi soluta.</p>
+    <p class="clearfix">
+        <img src="rafting.jpeg" alt="">
+        <span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nemo atque cumque beatae enim sed id aspernatur laudantium! Voluptates quam officia, autem saepe veritatis delectus corrupti minus ipsum a illo.
+        </span>
+        <span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nemo atque cumque beatae enim sed id aspernatur laudantium! Voluptates quam officia, autem saepe veritatis delectus corrupti minus ipsum a illo.
+        </span><span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nemo atque cumque beatae enim sed id aspernatur laudantium! Voluptates quam officia, autem saepe veritatis delectus corrupti minus ipsum a illo.
+        </span>
+        <!-- inline elemanlar yan yana geliyor ancak hizalanmadan.alttan doğru yan yana geliyor -->
+        <!-- float ettiğimizde üstten yan yana gelir -->
+    </p>
+    <!-- floatı temizlememiz gerekiyor -->
+</body>
+</html>

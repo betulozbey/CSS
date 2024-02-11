@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     /*background-position , hangi köşeden ötelensin.İlk parametre yatayda ötelenecek olan değer 2.değer üst taraftan ötelenecek değer. Sabit değer vermek yerine konum belirtebiliriz(bottom,bottom right,center...) */
+     /* background-size-> resmi çerçeveye yerleştirme */
+        /* gradient-> renk geçişi */
+        body{
+            margin: 0;
+        }
+        #header{
+            position: relative;
+            background-image: /* linear-gradient(to bottom right, rgba(230,255,230,0.5),rgba(102,255,102,0.5)), */ url(nature-3082832_640.jpg);
+            height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #header h1{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 80px;
+            color:rgb(5, 120, 5);
+        }
+        .logo{
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Background Text</h1>
+        <img class="logo" src="zyro-image.png" alt="" >
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+        box-sizing: border-box;
+        }
+        body{margin: 0;}
+        #showcase{background-color: #e182b3;
+        height: 615px ;
+        width: 100%;
+        padding: 10px;
+        }
+        #how-it-works{
+            background-color: #2FC997;
+            padding: 15px;
+            height: 78px;
+        }
+        .main-header{
+            background-color: #2FC997;
+            padding: 8px 16px;
+            height: 40px;
+        }
+        .main-nav{
+            display:inline-block ;
+            width: calc(100% - 99px);
+            text-align: right;
+        }
+        .main-nav__items{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .main-nav__item{
+            display: inline-block;
+            margin: 0px 10px;
+            text-decoration: none;
+            /* Burda text-decoraiton bilgisini değiştiremiyoruz inherited edilmiş tarayıcı direkt a etiketine ulaşarak bir değer verilmiş biz kalıtım yoluyla burda tanımlanmış 3 özelliği ezemiyoruz.Direkt a etiketlerine bu özelliği vermemiz gerekir */
+        }
+        .main-header__logo{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+           
+        }
+        /* Bu classı seç ve altındaki a etiketlerini seç.Bu bir combinatorsdır */
+        .main-nav__item a{
+            text-decoration:none ;
+            color:#fff;
+        }
+        .main-nav__item a:hover,
+        .main-nav__item:hover::before
+        {
+            color:#c0397f;
+        }
+        .main-nav__item::before{
+            content:'\2022' ;
+            color: white;
+        }
+        .main-nav__item a:active,
+        .main-nav__item:active::before{
+            color:#fff;
+        }
+        .main-nav__item--login a{
+            color: #fff;
+            background-color:#f6a8d0;
+            padding: 4px 16px;
+            border-radius: 8px;
+            border: 2px solid white;
+        }
+        .main-nav__item--login::before{
+            content:none ;
+        }
+        .main-nav__item--login a:hover{
+            color: #c0397f;
+            border: 2px solid #c0397f;
+            background-color: white;
+
+
+        }
+        
+
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <!-- a etiketi sol nav etiketi sağ tarafta olucak -->
+        <a href="#" class="main-header__logo">MovieApp</a>
+        <nav class="main-nav">
+            <ul class="main-nav__items">
+                <li class="main-nav__item"> 
+                    <a class="main-nav__link" href="">Diziler</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="">Filmler</a>
+                </li>
+                <li class="main-nav__item main-nav__item--login">
+                    <a href="">Login</a>
+                </li>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="showcase">
+            <h1>Welcome To MovieApp</h1>
+        </section>
+        <section id="how-it-works">
+            <h2></h2>
+        </section>
+    </main>
+</body>
+</html>

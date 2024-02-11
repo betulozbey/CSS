@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 150px;
+            border: 2px solid #888;
+            margin-bottom: 10px;
+        }
+        /* opacity değeri, 0 ile 1 arasında bir ögenin saydamlığını belirtir.0 tamamen saydam (görünmez),1 ise tamamen opak (tamamen görünür) */
+        /* ya da rgb nin son parametresi olarak da saydamlık belirtebiliriz .rgb(255,0,0,.5) */
+        #box1{
+            
+            background-color: rgb(255,0,0);
+            opacity: .5;
+            transition: opacity .5s;
+        }
+        #box1:hover{
+            
+            background-color: rgb(255,0,0);
+            opacity: .8;
+        }
+        #box2{
+            background-color: rgb(0, 255,0);
+            opacity: .7;
+        }
+        #box3{
+            background-color: rgb(0,0,255);
+            opacity: .2;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+</body>
+</html>

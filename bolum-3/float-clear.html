@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Containere eklediğimiz text-align bu özelliği kapsamaz.Çünkü block elemanlar.Text-align özelliği inline ve inline block elemanlara etki eder.inline demiş olsak içerik yoksa kaybolur.Block eleman için float özelliği kullanacağız.Burda direkt containere verirsek komple sağa yanaştırır ve içeriği kadar yer kaplamış olur.Float özelliğini tek tek boxlara verirsek  yan yana yanaşır.Float özelliği uyguladığımızda display özelliğini kaybetmiş gibi oluyoruz.Her float uyguladığımızda bir akış oluşturuyoruz ve ondan sonra gelen elemanların normal akış içerisinde devam etmeleri için clear uyguluyor olmamız gerekiyor. */
+
+        #container{
+            background-color: aqua;
+            /* Akış bozulduğu için bu zemin rengini göremeyiz.*/
+        }
+        .box{
+            width: 150px;
+            height: 100px;
+            background-color: rgb(93, 93, 213);
+            display: block;
+            float: right;
+        }
+        #box1{
+            float: left;
+        }
+        /* id,classı ezer */
+        /* Uyguladığımız elemandan sonra bir pseudo elementi temsil eder eklemeden görünmeyen bir element eklemiş gibi oluyoruz */
+        .clearfix::after{
+            content:"";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" class="clearfix">
+    <div class="box" id="box1">kutu 1</div>
+    <div class="box">kutu 2</div>
+    <div class="box">kutu 3</div>
+    <!-- <div style="clear: both;"></div> -->
+    <!-- bu floatı uyguladıktan sonra temizlemek için 1.yöntemimiz -->
+    <!-- diğer yöntem burada uyguladığımız div etiketlerinin kapsayıcı olan elemanına bir class verilir.class="clearfix" .clearfix::after uyguladığımız elemandan sonra görünmeyen bir element oluşturmuş oluyoruz. -->
+</div>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse eligendi, culpa iusto magni porro nihil. Ipsam voluptatum ea quam repellendus cumque esse inventore sint omnis quia! Nulla ipsa ut corporis!</p>
+<!-- clear yapmazsak alttan devam etmeyip bozları görmezden gelir ve aynı konumdan başlar. -->
+</body>
+</html>

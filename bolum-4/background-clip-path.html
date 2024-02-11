@@ -1,0 +1,57 @@
+<!-- Resme maske uygulama gibi düşünebiliriz. background-clip -> CSS özelliği, bir elemanın arka plan resminin (background-image) nasıl kırpılacağını belirler. background-clip özelliği, elemanın içeriği veya kenar kutularının nasıl arka plan ile ilişkilendirileceğini kontrol eder.
+
+Bu özellik, üç farklı değer alabilir:
+
+border-box: Arka plan resmi, elemanın içeriğini ve kenar kutularını kapsar. Yani arka plan, elemanın içeriğinin ve kenar kutularının tamamını doldurur.
+
+padding-box: Arka plan resmi, elemanın içeriğini ve iç kenar kutularını (padding) kapsar. Yani arka plan, iç kenar kutularının içerisini doldurur.
+
+content-box: Arka plan resmi, yalnızca elemanın içeriğini kapsar. Yani arka plan, yalnızca elemanın içeriğinin arkasını doldurur, iç kenar kutularını ve kenarları dahil etmez.
+
+background-clip özelliği genellikle elemanların arka planını şekillendirmek ve tasarımı geliştirmek için kullanılır. Özellikle, özelleştirilmiş arka plan efektleri oluşturmak için background-clip ile background-image ve clip-path bir arada kullanılabilir. Ancak, "background clip path" olarak geçen özellik, "clip-path" özelliği ve "background-clip" özelliğinin birleşiminden bahsediyorsa, daha ayrıntılı bir açıklama gerekebilir. Bu durumda, iki özelliğin birlikte nasıl kullanılabileceğini ve ne tür sonuçlar elde edilebileceğini açıklamak için örnek kod veya tasarım kullanılabilir. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #header{
+            position: relative;
+            background-image:url(nature-3082832_640.jpg);
+            height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+
+
+        }
+        #header h1{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 80px;
+            color:rgb(5, 120, 5);
+        }
+        .logo{
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Background Text</h1>
+        <img class="logo" src="zyro-image.png" alt="" >
+        
+    </div>
+</body>
+</html>

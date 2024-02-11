@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Padding de 100 ün içine dahil ediliyor. */
+        *{
+            box-sizing: border-box;
+        }
+        h1{
+         margin: 0;   
+        }
+        header,footer{
+            background-color:#508D69 ;
+            color: #EEF296;
+            padding:20px;
+        }
+        .col{
+            float: left;
+            padding: 20px 20px 20px 0;
+        }
+        .menu{
+            width: 25%;
+     
+        }
+        .menu ul{
+            list-style-type:none ;
+            margin: 0;
+            padding:0;
+        }
+        .menu li{
+            padding: 8px;
+            margin-bottom:8px;
+            background-color:#502461 ;
+            color: white;
+        }
+        .menu li:hover{
+            /* el işareti çıkıyor */
+            cursor: pointer;
+            background-color: #8267BE;
+        }
+        /* bunlar ilk etapta alt alta gelir.yanyana almak için float özelliği kullanabiliriz */
+        .content{
+            width: 75%;
+           
+        }
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Header</h2>
+    </header>
+
+    <main class="clearfix">
+        <div class="menu col">
+            <ul>
+                <li>Html</li>
+                <li>Css</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+        <div class="content col">
+            <h1>Komple Web Geliştirme</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, nihil? Quaerat repellendus corrupti reiciendis at, excepturi dicta natus atque porro doloremque ullam numquam earum suscipit veniam nesciunt pariatur itaque alias.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut officia molestiae quas quasi, ad natus modi quisquam, quam maiores aspernatur, nobis ratione expedita deserunt aut. Cum repudiandae sunt veniam eligendi!
+            </p>
+        </div>
+
+
+    </main>
+    
+    <footer>
+        <h2>Footer</h2>
+    </footer>
+</body>
+</html>

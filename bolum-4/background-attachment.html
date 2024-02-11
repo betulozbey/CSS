@@ -1,0 +1,91 @@
+<!-- Arka plan eki -->
+<!-- background-attachment CSS özelliği, bir arka plan resminin (background-image) belirli bir belge veya elemanla ilişkili olarak nasıl davranacağını belirler. Bu özellik, bir elemanın kaydırılması durumunda arka plan resminin nasıl davranacağını kontrol etmek için kullanılır.
+
+Bu özellik, üç farklı değer alabilir:
+
+scroll: Varsayılan değerdir. Arka plan resmi, belge veya eleman kaydırıldığında, arka plan resmi belge veya elemanla birlikte kayar. Yani arka plan resmi, belge veya elemanın içeriğiyle birlikte hareket eder.
+
+fixed: Arka plan resmi, belge veya eleman kaydırıldığında sabit kalır. Yani arka plan resmi, belge veya elemanın içeriği kaydırıldığında sabit bir konumda kalır.
+
+local: Arka plan resmi, elemanın kendisiyle kayar, yani arka plan resmi, elemanın sınırları içinde kaydırılır, ancak eleman kaydırıldığında arka plan resmi de kayar.
+
+Bu özellik özellikle web sayfalarında tasarım ve kullanıcı deneyimi açısından önemlidir. Örneğin, bir sayfanın başlığını veya menüsünü sabit bir konumda tutmak için background-attachment: fixed kullanılabilir, böylece sayfa kaydırıldığında bu öğeler sabit kalırken, arka plan resmi diğer içerikle birlikte kayar. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .bg{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .bg-image1{
+            height: 100vh;
+            background-image: url(pexels-photo-1037992.webp);
+          
+        }
+        .bg-image2{
+            height: 50vh;
+            background-image: url(pexels-photo2.webp);
+            
+        }
+        .caption{
+
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            /* satırı olduğu gibi kaplatıp text align özelliği veriyoruz */
+            text-align: center;
+        }
+        .caption .border{
+            font-size:35px ;
+            background-color: rgb(232, 224, 224);
+            color: rgb(196, 73, 94);
+            padding: 20px;
+            /* büyük harf yapmaya yarar */
+            text-transform: uppercase;
+            /* harfler arası mesafe */
+            letter-spacing: 10px;
+        }
+        .box{
+            color: #777;
+            background-color: rgb(229, 229, 229);
+            text-align: center;
+            padding: 50px 80px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="bg bg-image1">
+        <div class="caption">
+            <span class="border">Lorem, ipsum.</span>
+        </div>
+    </div>
+    <div class="box">
+        <h3>Lorem, ipsum dolor.</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus numquam nemo adipisci similique est inventore? Beatae laborum ipsam quibusdam quaerat accusantium illo, culpa tenetur maiores deleniti odio assumenda ipsa corrupti.
+        Sint possimus similique exercitationem placeat. Commodi rem officia accusantium optio, repellendus assumenda. Dolor vero itaque et! Autem mollitia dolor quisquam dolores ducimus fugiat. Voluptatum a maxime omnis, eum quidem odio!
+        Voluptate officiis recusandae dolor, at aut eius cupiditate amet, veniam assumenda incidunt qui architecto explicabo beatae, laborum quidem? Repellat natus voluptatem est nisi? Maiores quo sapiente sed, iusto maxime ab.</p>
+    </div>
+    <div class="bg bg-image2">
+        <div class="caption">
+            <span class="border">Lorem, ipsum.</span>
+        </div>
+    </div>
+    <div class="box">
+        <h3>Lorem, ipsum dolor.</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus numquam nemo adipisci similique est inventore? Beatae laborum ipsam quibusdam quaerat accusantium illo, culpa tenetur maiores deleniti odio assumenda ipsa corrupti.
+        Sint possimus similique exercitationem placeat. Commodi rem officia accusantium optio, repellendus assumenda. Dolor vero itaque et! Autem mollitia dolor quisquam dolores ducimus fugiat. Voluptatum a maxime omnis, eum quidem odio!
+        Voluptate officiis recusandae dolor, at aut eius cupiditate amet, veniam assumenda incidunt qui architecto explicabo beatae, laborum quidem? Repellat natus voluptatem est nisi? Maiores quo sapiente sed, iusto maxime ab.</p>
+    </div>
+</body>
+</html>

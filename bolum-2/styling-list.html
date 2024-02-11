@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+        box-sizing: border-box;
+        }
+        body{margin: 0;}
+        #showcase{background-color: #e182b3;
+        height: 500px ;
+        width: 100%;
+        padding: 10px;
+        }
+        #how-it-works{
+            background-color: #2FC997;
+            padding: 10px;
+        }
+        .main-header{
+            background-color: #2FC997;
+        }
+        .main-nav{
+            display:inline-block ;
+            width: calc(100% - 74px);
+            text-align: right;
+        }
+        .main-nav__items{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .main-nav__item{
+            display: inline-block;
+
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <!-- a etiketi sol nav etiketi sağ tarafta olucak -->
+        <a href="#">MovieApp</a>
+        <nav class="main-nav">
+            <ul class="main-nav__items">
+                <li class="main-nav__item"> 
+                    <a class="main-nav__link" href="#">Home</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#">Movies</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#">Contact</a>
+                </li>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="showcase">
+            <h1>Welcome To MovieApp</h1>
+        </section>
+        <section id="how-it-works">
+            <h2>How İt Works?</h2>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        p::first-line{
+            font-weight: bold;
+            color: brown;
+            word-spacing: 2px;
+            letter-spacing: 1px;
+        }
+        p.about::first-line{
+            color: green;
+        }
+        p::first-letter{
+            font-size: 48px;
+        }
+        p::selection{
+            background-color: hotpink;
+        }
+        p::after{
+            color: red;
+            font-size: 40px;
+            content: '\261D';
+            padding: 10px;
+
+        }
+
+            /* hexadecimal karşılığını ekleyeceksin */
+        
+    </style>
+  </head>
+  <body>
+    <!-- Pseudo Elements->Herhangi bir elementin bir parçasına müdahale etmiş oluyoruz -->
+    
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nemo
+      numquam soluta sapiente amet? Numquam aspernatur rerum minima fugiat neque
+      corporis facere sed a, cupiditate dolor quasi maxime ratione ipsa.
+    </p>
+
+    <p class="about">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam eligendi
+      neque vel, eaque dolorem fugiat vitae aut animi. Voluptates hic obcaecati
+      dolorum id? Veritatis, aspernatur accusantium quis quasi tempore a?
+    </p>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- viewport-kullanıcının o an gördüğü alan  -->
+    <title>Document</title>
+    <style>
+        /* bu özelliğin alternatif bir yolu da var  */
+        /* html,body{
+            height: 100%;
+        } */
+        body{
+            margin: 0;
+        }
+        #header{
+            position: relative;
+            /* absolute olan nesne kapsayıcı elemana göre arar */
+            background-color: aquamarine;
+            background-image: url(nature-3082832_640.jpg);
+            height: 100vh;
+            /* width:80vw ; */
+            /* görünür alanın %50sini-100ünü kapla */
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* headerın kapsayıcı elemanı olduğu için ona yükseklik vermemiz gerekir.en tepedeki kapsauıcı elemana height vermemiz gerekir*/
+        }
+        /* Sabit bir değer vermek her zaman güzel bir sonuç vermez orantısal olarak vermemiz daha doğrudur */
+        #header h1{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* İçerik kadar da geriye yukarıya almamız gerekiyor */
+            transform: translate(-50%,-50%);
+            font-size: 60px;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Background Text</h1>
+
+    </div>
+</body>
+</html>

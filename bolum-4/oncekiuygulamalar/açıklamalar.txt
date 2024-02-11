@@ -1,0 +1,75 @@
+Margin (Dış Kenarlık): Bir elementin dışındaki boşluğu kontrol eder. Margin, bir elementin etrafında diğer elementlerden uzaklık oluşturur. Bu, elementler arasında boşluk bırakmak veya bir elementi belirli bir konuma yerleştirmek için kullanılır. Negatif margin kullanılarak, bir elementin diğer elementlerin üzerine çıkmasını veya başka bir elementin içeriğiyle birleştirilmesini sağlamak da mümkündür.
+
+Border (Kenarlık): Bir elementin çevresine bir kenarlık çizgisi ekler. Border, elementin kenarlarının görünümünü belirler. Kenarlık, genişlik (width), stili (style) ve rengi (color) gibi özelliklerle özelleştirilebilir. Bir elementin dış kenarlık çizgisini belirtmek için kullanılır.
+
+Padding (İç Dolgu): Bir elementin içeriği ile kenarlık arasındaki boşluğu kontrol eder. Padding, bir elementin içeriğinin etrafındaki boşluktur. Elementin içeriğinin kenarları ve iç kenarlık arasında bir boşluk oluşturarak, içeriği dış kenarlıktan uzaklaştırır. Bu, içeriğin dış kenarlığa daha yakın veya daha uzak olmasını sağlar.
+
+Bu özelliklerin kombinasyonu, bir elementin diğer elementlerle arasındaki mesafeyi ve görünümünü kontrol etmek için kullanılır.
+
+
+padding-nesne ile kenarları arası aralık 
+CSS'de section etiketi, belirli bir bölümü tanımlamak için kullanılır. Bu bölüm, bir web sayfasında belirli bir konsepti, içeriği veya işlevi gruplamak için kullanılabilir. section etiketi, belirli bir bölümü veya bölümü belirlemek için kullanıldığında, içeriği bağımsız bir şekilde tanımlar. Bu, sayfa yapısını daha anlaşılır ve organize edilmiş hale getirmeye yardımcı olur.
+Bu, bir web sayfasında belirli bir bölümü (örneğin, bir makalenin bir bölümü veya bir ürünün açıklaması gibi) tanımlar.
+
+
+MARGİN COLLAPSİNG
+Kenar boşluğu bir HTML öğesi içindeki içerikle dış sınırlar arasındaki ilişkiyi ifade eder. Margin collapsing, birbirine bitişik iki veya daha fazla HTML öğesi arasında margin (kenar boşluğu) değerlerinin birleşmesi veya birbirini etkilemesi olarak tanımlanır. Bu genellikle blok öğeler (div, p, vb.) arasında olur.
+
+Margin collapsing, CSS box modelinin bir parçasıdır ve bu durumda, özellikle dikey margin'ler arasındaki davranışı ifade eder. Margin collapsing, CSS spesifikasyonu tarafından tanımlanmıştır.
+
+Birkaç durumda margin collapsing meydana gelir:
+
+Top ve bottom margin'lerin birleşmesi: Birbirine bitişik iki blok öğesi arasında, üst öğenin alt margin'i ile alt öğenin üst margin'i birleşir. Ancak, her iki margin'in de negatif olmadığından emin olunması gerekir, aksi takdirde öngörülemeyen sonuçlar olabilir.
+
+Parent ve child öğeler arasındaki margin collapsing: Parent ve child öğeler arasında da margin collapsing gerçekleşebilir. Özellikle, child öğenin üst margin'i parent öğenin üst margin'ine birleşebilir.
+
+Margin collapsing, özellikle düzgün bir şekilde yerleştirilmediğinde beklenmeyen sonuçlara yol açabilir ve web sayfasının görünümünü etkileyebilir. Bu nedenle, CSS'de layout tasarımı yaparken, margin collapsing'i dikkate almak önemlidir ve istenmeyen sonuçları önlemek için uygun stratejiler kullanılmalıdır. Bu stratejiler arasında clear-fix teknikleri, padding kullanımı ve float özelliklerinin dikkatli kullanımı yer alabilir.
+
+
+BOX-SIZING
+CSS box-sizing özelliği, bir HTML öğesinin genişliği ve yüksekliği hesaplanırken border ve padding (kenar boşluğu ve dolgu) değerlerinin dahil edilip edilmeyeceğini belirler. Bu özellik, özellikle element boyutlarını belirlerken, kenar boşluğu ve dolgu değerlerini hesaba katmak veya katmamak istediğinizde kullanışlıdır.
+
+Box-sizing özelliğinin değerleri şunlardır:
+
+content-box: Bu varsayılan değerdir. Elementin boyutunu yalnızca içerik (content) kısmını içerir. Kenar boşluğu ve dolgu değerleri hesaba katılmaz. Yani, öğenin belirtilen genişlik ve yükseklik değerleri yalnızca içeriğin boyutunu temsil eder.
+border-box: Bu değerde, elementin boyutu kenar boşluğu ve dolgu değerlerini içerir. Yani, öğenin belirtilen genişlik ve yükseklik değerleri içeriği, kenar boşluğunu ve dolguyu tamamen içerir.
+Özellikle, responsive web tasarımında veya farklı tarayıcılarda tutarlılık sağlamak için box-sizing özelliğini kullanmak önemlidir. border-box değeri, öğelerinizi tasarlarken daha tutarlı bir davranış sağlar, çünkü kenar boşluğu ve dolgu değerleri genellikle içeriği değiştirmeden önceki ölçüleri etkilemez.
+
+Örneğin, bir kutunun genişliğini yüzde cinsinden belirlediğinizde ve içeriği, dolgu ve kenar boşluğu dahil edilmediğinde belirli bir genişlikte kalmak istiyorsanız, border-box kullanarak daha tutarlı sonuçlar elde edebilirsiniz. Bu, özellikle bir sayfa genişliği üzerinde çalışırken faydalı olabilir, böylece içerik genişledikçe kenar boşluğu ve dolgu değerleri içerilen genişlikte dahil edilir, dolayısıyla genişlikte değişiklik yapmaz.
+
+
+DISPLAY
+CSS'de display özelliği, bir HTML öğesinin tarayıcıda nasıl görüneceğini belirler. Bu özellik, öğelerin blok, satır veya bazı diğer özel düzenlerde görüntülenip görüntülenmeyeceğini kontrol etmek için kullanılır.
+
+İşte yaygın kullanılan display özelliği değerleri:
+
+block: Öğeyi blok düzeninde görüntüler. Bu, öğenin kendisini bir satırdan tamamen ayırdığı anlamına gelir ve öğenin genişliği belirtilmediği sürece tüm genişlik alanını kaplar. Örneğin, <div> öğesi varsayılan olarak blok öğesi olarak davranır.
+
+div {
+  display: block;
+}
+inline: Öğeyi satır düzeninde görüntüler. Bu, öğenin bir satırın içinde diğer içerikle aynı düzeyde yer aldığı anlamına gelir. Örneğin, <span> öğesi varsayılan olarak satır öğesi olarak davranır.
+
+span {
+  display: inline;
+}
+inline-block: Öğeyi satır düzeninde görüntüler, ancak blok özellikleri (örneğin, yükseklik ve genişlik) uygulanabilir. Bu, öğenin bir satırda diğer içerikle aynı düzeyde yer almasını sağlarken, blok özelliklerini de kullanmanıza olanak tanır.
+
+button {
+  display: inline-block;
+}
+none: Öğeyi görüntülemez. Yani, öğe sayfada hiçbir yerde görünmez ve boş alan bırakmaz. Bu, bir öğeyi geçici olarak gizlemek veya belirli koşullara göre görünmez yapmak için kullanışlıdır.
+
+.hidden {
+  display: none;
+}
+flex: Öğeyi esnek bir konteyner içinde esnek bir düzenle görüntüler. Bu, modern web tasarımında çok popüler olan bir özelliktir ve öğelerin bir dizi esnek kutuda nasıl hizalandığını veya düzenlendiğini kontrol etmek için kullanılır.
+.container {
+  display: flex;
+}
+grid: Öğeyi bir ızgara düzeninde görüntüler. Bu, CSS Grid Layout Module tarafından tanımlanan bir özelliktir ve karmaşık düzenler oluşturmak için kullanılır.
+
+.container {
+  display: grid;
+}
+Bu, display özelliğinin en yaygın kullanılan değerleridir. Ancak, CSS'de daha fazla display değeri ve kullanımı bulunmaktadır ve bu, belirli tasarım ihtiyaçlarına göre değişebilir.

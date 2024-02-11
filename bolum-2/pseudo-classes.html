@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a {
+        border: 2px solid gray;
+        padding: 5px 8px;
+        display: inline-block;
+        text-decoration: none;
+        width: 55px;
+        text-align: center;
+      }
+      /* Ziyaret edilmemiş link için */
+      a:link{
+        color: red;
+
+      }
+      /* Ziyaret edilmiş link */
+      a:visited{
+        color: green;
+      }
+      /* Üzerine geldik ama tıklamadık üzerindeyken fare yazı beyaz arka plan sarı görünür*/
+      a:hover{
+        color: white;
+        background-color: yellow;
+      }
+      /* Tıkladığımız (bir kere tıkladım) anda ziyaret edilmedi */
+      a:active{
+        color: #fff;
+        background-color: violet;
+      }
+      /* Sırası önemli.Bunları sadece link için kullanmayız */
+      /* div üzerine gelindiğinde */
+      div:hover p{
+        background-color: tomato;
+        display: block;
+      }
+      p{display: none;}
+    </style>
+  </head>
+  <body>
+    <a href="borders1.html">Home</a>
+    <a href="box-model1.html">Products</a>
+    <a href="combinators1.html1">About</a>
+    <br><br>
+    <div>
+      Click here!
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam rem aut iste non, quo aspernatur assumenda dolorem accusamus iusto fuga vitae libero sapiente esse. Praesentium perferendis porro placeat incidunt quam!</p>
+    </div>
+  </body>
+</html>

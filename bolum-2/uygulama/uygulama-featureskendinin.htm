@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+        .main-header{
+            background-color:rgb(168, 54, 168);
+            padding:8px 16px;
+            height: 60px;
+        }
+        .main-nav{
+            display: inline-block;
+            width: calc(100% - 99px);
+            text-align: right;
+        }
+        .main-header__logo{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            font-size: 21px;
+          
+        }
+        .main-nav__item::before{
+            content: '\2022';
+            color: #fff;
+        }
+        .main-nav__item a:hover,.main-nav__item:hover::before{
+            color: rgb(34, 1, 33);
+        }
+        .main-nav__items{
+            margin: 0;
+            padding: 0;
+            list-style: none;   
+        }
+        .main-nav__item{
+            padding-right:10px;
+            display: inline-block;
+            text-decoration: none;
+
+        }
+        .main-nav__item:last-child{
+            padding-right: 0;
+        }
+        .main-nav__items li{
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+        }
+        .main-nav__item a{
+            color: #fff;
+            text-decoration: none;
+        }
+        .main-nav__item a:active,
+        .main-nav__item:active::before {
+            color: white;
+        }
+        .main-nav__item--login a{
+            color:#fff ;
+            background-color: rgb(232, 159, 209);
+            padding:4px 16px;
+            border-radius: 8px;
+            border: 3px solid black;       
+         }
+         .main-nav__item--login::before{
+            content:none ;
+         }
+         .main-nav__item--login a:hover{
+            color: #c0397f;
+            border: 2px solid #c0397f;
+            background-color: white;
+         }
+        #show{
+            background-color: rgb(165, 167, 151);
+            height:350px;
+            width: 100%;  
+            padding: 5px; 
+            background-image:url(film_sesleri.jpg);  
+            background-position: center; 
+        } 
+        #show h1{
+            color: #fff;
+            text-align: right;
+        }
+        #how{
+            background-color: #fff;
+            text-align: center;
+            height: 35px;
+            padding: 5px;
+        }
+        .col {
+            display: inline-block;
+            width: 31%;
+            padding: 16px;
+            margin: 4px;
+        }
+        #how h2{
+            color: #3e4555;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .row{
+            margin-bottom: 5px;
+            margin-top: 25px;
+        }
+        .icon-box h3{
+            color: #3e4555;
+            font-size: 15px;
+        }
+        .icon-box i{
+            color: rgb(168, 54, 168);
+        }
+
+       
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <a href="#" class="main-header__logo">MovieApp</a>
+        <nav class="main-nav">
+            <ul class="main-nav__items">
+                <li class="main-nav__item"><a href="#">Filmler</a></li>
+                <li class="main-nav__item"><a href="#">Diziler</a></li>
+                <li class="main-nav__item--login"><a href="#">Login</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <main>
+        <section id="show">
+        <h1>Welcome To MovieApp</h1>
+        </section>
+        <section id="how">
+        <div>
+            <h2>How İt Works</h2>
+            <p>We will show you step by how to start watching your favorite movie&tv shows starting now!</p>
+        </div>
+        <div class="row">
+            <div class="icon-box col">
+                <h3>Register</h3>
+                <i class="fa-solid fa-right-to-bracket fa-2x"></i>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nobis nesciunt fugiat, sit unde saepe.
+                    </p>
+            </div>
+            <div class="icon-box col">
+                <h3>Choose A Plan</h3>
+                <i class="fa-brands fa-buffer fa-2x" ></i>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nobis nesciunt fugiat, sit unde saepe.
+                    </p>
+            </div>
+            <div class="icon-box col">
+                <h3>Enjoy Movify</h3>
+                <i class="fa-regular fa-face-smile fa-2x"></i>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nobis nesciunt fugiat, sit unde saepe.
+                    </p>
+            </div>
+
+        </div>
+        </section>
+        <section id="features">
+            <div class="row">
+                <div class="col2">
+
+                </div>
+                <div class="col2">
+                    <h4>   Watch all Movies & TV Shows Once They Get Released!</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit, quis?</p>
+                    <a href="#">View Features</a>
+                </div>
+            </div>
+
+
+        </section>
+        
+
+    </main>
+    
+</body>
+</html>

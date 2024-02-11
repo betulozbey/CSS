@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Containere eklediğimiz text-align bu özelliği kapsamaz.Çünkü block elemanlar.Text-align özelliği inline ve inline block elemanlara etki eder.inline demiş olsak içerik yoksa kaybolur.Block eleman için float özelliği kullanacağız.Burda direkt containere verirsek komple sağa yanaştırır ve içeriği kadar yer kaplamış olur.Float özelliğini tek tek boxlara verirsek  yan yana yanaşır.Float özelliği uyguladığımızda display özelliğini kaybetmiş gibi oluyoruz.Her float uyguladığımızda bir akış oluşturuyoruz ve ondan sonra gelen elemanların normal akış içerisinde devam etmeleri için clear uyguluyor olmamız gerekiyor. */
+
+        #container{
+            background-color: aqua;
+        }
+        .box{
+            width: 150px;
+            height: 100px;
+            background-color: rgb(93, 93, 213);
+            display: block;
+            float: right;
+        }
+        #box1{
+            float: left;
+        }
+        /* id,classı ezer */
+    </style>
+</head>
+<body>
+    <div id="container">
+    <div class="box" id="box1">kutu 1</div>
+    <div class="box">kutu 2</div>
+    <div class="box">kutu 3</div>
+</div>
+</body>
+</html>
